@@ -16,3 +16,5 @@
 - Login and see if your data is coming properly or not into the store
 - Navbar should update as soon as User logs in 
 - Refactor our code , Create constants file and add BASE_URL there and make Components folder and all the components into it
+- If you aren't logged in you can't access other routes
+- If token is not present navigate user to Login route
