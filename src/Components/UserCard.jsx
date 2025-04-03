@@ -1,4 +1,6 @@
+// eslint-disable-next-line react/prop-types
 const UserCard = ({ user }) => {
+  // eslint-disable-next-line react/prop-types
   const { firstName, lastName, age, photoUrl, about, gender } = user;
   return (
     <div className="flex justify-center" style={{ padding: "30px" }}>
@@ -7,7 +9,8 @@ const UserCard = ({ user }) => {
         style={{ borderRadius: "10px", background: "black" }}
       >
         <img
-          style={{ width: "350px", height: "300px" }}
+          style={{}}
+          // eslint-disable-next-line react/prop-types
           src={user.photoUrl}
           alt="Sunset in the mountains"
         />

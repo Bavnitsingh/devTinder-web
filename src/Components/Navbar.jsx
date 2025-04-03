@@ -21,7 +21,7 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="navbar bg-base-300 shadow-sm">
+    <div className="navbar bg-base-300 shadow-sm ">
       <div className="flex-1">
         <Link to="/" className="btn btn-outline btn-info text-xl">
           <h2>👨‍💻 DevTinder</h2>
