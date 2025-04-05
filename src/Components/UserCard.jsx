@@ -14,11 +14,12 @@ const UserCard = ({ user }) => {
         <div className="image-container">
           <img src={photoUrl} alt="Sunset in the mountains" />
         </div>
-        <div className="px-6 py-4">
-          <div style={{ padding: "10px" }}>
+          <div
+            style={{ padding: "10px", fontSize: "20px", fontWeight: "bold" }}
+          >
             {firstName + " " + lastName}
-          </div>
         </div>
+        
         <div className="px-6 pt-4 pb-2" style={{ padding: "10px" }}>
           <div className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
             {(age || gender) && (

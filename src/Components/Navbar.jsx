@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
                 <Link
@@ -60,8 +60,21 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/connections" className="no-underline" style={{color:"white"}}>
+                <Link
+                  to="/connections"
+                  className="no-underline"
+                  style={{ color: "white" }}
+                >
                   Connections
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/requests"
+                  className="no-underline"
+                  style={{ color: "white" }}
+                >
+                  Requests
                 </Link>
               </li>
               <li>

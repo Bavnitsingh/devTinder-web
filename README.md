@@ -24,3 +24,8 @@
 - Edit Profile feature
 - Show toast when profile is saved
 
+- Build connections page
+- Build Requests page
+
+
+

@@ -54,11 +54,10 @@ const Connections = () => {
           Connections
         </h1>
         {connections.map((connection) => {
-          const { firstName, lastName, about, skills, photoUrl, age, gender } =
+          const { _id,firstName, lastName, about, skills, photoUrl, age, gender } =
             connection;
           return (
-            // eslint-disable-next-line react/jsx-key
-            <div
+            <div key={_id}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -69,15 +68,15 @@ const Connections = () => {
                 width: "24rem", // Tailwind's w-96 (384px)
               }}
             >
-              <div className="flex justify-center"
+              <div
+                className="flex justify-center"
                 style={{ margin: "10px", borderRadius: "5px", padding: "10px" }}
               >
                 <img
                   style={{
-                    width: "150px",
-                    height: "150px",
-                    borderRadius: "100px",
-                  
+                    width: "200px",
+                    height: "200px",
+                     borderRadius: "40px",
                   }}
                   src={photoUrl}
                   alt="profile-picture"
@@ -88,9 +87,17 @@ const Connections = () => {
                   {firstName} {lastName}
                 </h4>
 
-                <p className="text-base text-slate-600 mt-4 font-light ">
+                <p>
                   {about}
                 </p>
+                <div className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  {(age || gender) && (
+                    <p>
+                      {age ? age : ""} {age && gender ? ", " : ""}{" "}
+                      {gender ? gender : ""}
+                    </p>
+                  )}
+                </div>
                 <div className="flex justify-center p-6 pt-2 gap-7">
                   {skills.join(" , ")}
                 </div>

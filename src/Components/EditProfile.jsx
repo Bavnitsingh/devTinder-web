@@ -92,7 +92,7 @@ const EditProfile = ({ user }) => {
               <label htmlFor="gender">Gender</label>
               <select
                 value={gender}
-                onChange={(e) => setGender(e.target.value)}
+                onChange={(e) => setGender(e.target.value + "")}
                 className="justify-center"
                 style={{
                   padding: "10px",
@@ -163,15 +163,14 @@ const EditProfile = ({ user }) => {
           </div>
         </div>
         <center>Your Card Preview is Below 👇 </center>
-        <br/>
+        <br />
         <div className="flex justify-center">
           <UserCard
             user={{ firstName, lastName, photoUrl, age, gender, skills, about }}
           />
         </div>
-        
       </div>
-      <br/>
+      <br />
     </div>
   );
 };
