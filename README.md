@@ -26,6 +26,7 @@
 
 - Build connections page
 - Build Requests page
+- Added Feature - Accept/Reject the connection Request
 
 
 

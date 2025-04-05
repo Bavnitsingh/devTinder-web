@@ -57,7 +57,7 @@ const Connections = () => {
           const { _id,firstName, lastName, about, skills, photoUrl, age, gender } =
             connection;
           return (
-            <div key={_id}
+            <div className="bg-base-200" key={_id}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -83,9 +83,9 @@ const Connections = () => {
                 />
               </div>
               <div className="p-6 text-center" style={{ padding: "10px" }}>
-                <h4 className="mb-1 text-xl font-semibold text-slate-800">
+                <h2 className="mb-1 text-xl font-semibold text-slate-800">
                   {firstName} {lastName}
-                </h4>
+                </h2>
 
                 <p>
                   {about}

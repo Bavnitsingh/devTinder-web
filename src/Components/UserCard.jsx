@@ -32,6 +32,7 @@ const UserCard = ({ user }) => {
           <div className="text-gray-300 overflow-hidden">
             <p className="break-words whitespace-normal">{about}</p>
           </div>
+         
           <div>{skills.join(", ")}</div>
           <div style={{ margin: "10px" }}>
             <button className="btn btn-soft btn-error">Ignore</button>
