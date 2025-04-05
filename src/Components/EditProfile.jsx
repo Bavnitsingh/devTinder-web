@@ -16,7 +16,6 @@ const EditProfile = ({ user }) => {
   const [skills, setSkills] = useState(user.skills);
   const [showToast, setShowToast] = useState(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [error, setError] = useState("");
   const saveProfile = async () => {
     setError("");
@@ -36,7 +35,7 @@ const EditProfile = ({ user }) => {
     }
   };
   return (
-    <>
+    <div>
       {showToast && (
         <div className="toast toast-middle">
           <div className="alert alert-info">
@@ -113,7 +112,7 @@ const EditProfile = ({ user }) => {
               <textarea
                 value={about}
                 onChange={(e) => setAbout(e.target.value)}
-                className="justify-center"
+                className="justify-center about-text"
                 style={{
                   padding: "10px",
                   margin: "5px",
@@ -122,7 +121,7 @@ const EditProfile = ({ user }) => {
                   borderRadius: "5px",
                   resize: "vertical", // Allows users to resize the textarea vertically
                 }}
-                placeholder="Write something about yourself..."
+                placeholder="Write something about yourself in only 10 words..."
               ></textarea>
               <label htmlFor="photoUrl">Photo Url</label>
               <input
@@ -140,7 +139,7 @@ const EditProfile = ({ user }) => {
               <label htmlFor="Skills">Skills</label>
               <input
                 type="text"
-                value={skills.join(", ")} // Convert array to a string for display
+                value={skills.join(" , ")} // Convert array to a string for display
                 onChange={(e) =>
                   setSkills(
                     e.target.value.split(",").map((skill) => skill.trim())
@@ -164,11 +163,16 @@ const EditProfile = ({ user }) => {
           </div>
         </div>
         <center>Your Card Preview is Below 👇 </center>
-        <UserCard
-          user={{ firstName, lastName, photoUrl, age, gender, skills, about }}
-        />
+        <br/>
+        <div className="flex justify-center">
+          <UserCard
+            user={{ firstName, lastName, photoUrl, age, gender, skills, about }}
+          />
+        </div>
+        
       </div>
-    </>
+      <br/>
+    </div>
   );
 };
 

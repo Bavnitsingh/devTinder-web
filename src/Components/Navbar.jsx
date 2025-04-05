@@ -53,14 +53,16 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/profile"
-                  className="justify-between"
+                  className="justify-between no-underline"
                   style={{ color: "white" }}
                 >
                   Profile
                 </Link>
               </li>
               <li>
-                <a>Settings</a>
+                <Link to="/connections" className="no-underline" style={{color:"white"}}>
+                  Connections
+                </Link>
               </li>
               <li>
                 <a onClick={handleLogout}>Logout</a>

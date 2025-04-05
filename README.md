@@ -21,3 +21,6 @@
 
 - Built Logout Feature
 - Built UserCard on Feed
+- Edit Profile feature
+- Show toast when profile is saved
+
