@@ -45,11 +45,11 @@ const Request = () => {
     <>
       <h1 style={{ textAlign: "center" }}>Connection Requests</h1>
       <div
+        className="px-8"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "20px",
-          padding: "10px",
           marginBottom: "100px",
         }}
       >
@@ -61,7 +61,7 @@ const Request = () => {
             <div
               key={request._id}
               className="card bg-base-300"
-              style={{ width: "300px", height: "700px", borderRadius: "10px" }}
+              style={{ width: "300px", height: "720px", borderRadius: "10px" }}
             >
               <img src={photoUrl} alt={`${firstName} ${lastName}`} />
 

@@ -121,7 +121,7 @@ const EditProfile = ({ user }) => {
                   borderRadius: "5px",
                   resize: "vertical", // Allows users to resize the textarea vertically
                 }}
-                placeholder="Write something about yourself in only 10 words..."
+                placeholder="Write something about yourself in atmost 50 words..."
               ></textarea>
               <label htmlFor="photoUrl">Photo Url</label>
               <input

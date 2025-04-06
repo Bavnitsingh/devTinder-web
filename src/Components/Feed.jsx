@@ -8,14 +8,14 @@ const Feed = () => {
   const feed = useSelector((store) => store.feed);
   const dispatch = useDispatch();
   const getFeed = async () => {
-    if (feed) return;
+    if (feed && feed.length > 0) return; // ✅ Fix
     try {
       const res = await axios.get(BASE_URL + "/user/feed", {
         withCredentials: true,
       });
       dispatch(addFeed(res.data.data));
     } catch (err) {
-       console.error("Error fetching feed:", err);  
+      console.error("Error fetching feed:", err);
     }
   };
   useEffect(() => {

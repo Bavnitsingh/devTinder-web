@@ -103,7 +103,7 @@ const Login = () => {
 
           <label htmlFor="Password">Password : </label>
           <input
-            type="text"
+            type="password"
             placeholder="Enter your Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
