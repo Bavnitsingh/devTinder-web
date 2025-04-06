@@ -18,7 +18,7 @@ const Request = () => {
       );
       dispatch(removeRequest(_id))
     } catch (err) {
-      setError(err?.response?.data || "Something went wrong");
+      setError(err?.res?.data || "Something went wrong");
     }
   };
 

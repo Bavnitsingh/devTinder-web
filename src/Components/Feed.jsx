@@ -23,7 +23,11 @@ const Feed = () => {
   }, []);
   
    if (!feed || feed.length === 0) {
-     return <div>Loading user feed...</div>; // ✅ Handle missing data
+     return (
+       <center>
+         <h1>No New User Found</h1>
+       </center>
+     ); // ✅ Handle missing data
    }
 
    return (
