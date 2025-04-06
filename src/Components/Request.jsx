@@ -61,25 +61,25 @@ const Request = () => {
             <div
               key={request._id}
               className="card bg-base-300"
-              style={{ width: "400px", height: "500px" }}
+              style={{ width: "300px", height: "700px", borderRadius: "10px" }}
             >
-              <figure className="rounded-full">
-                <img
-                  src={photoUrl}
-                  alt={`${firstName} ${lastName}`}
-                  style={{
-                    height: "200px",
-                    width: "100%",
-                    objectFit: "cover",
-                  }}
-                />
-              </figure>
+              <img src={photoUrl} alt={`${firstName} ${lastName}`} />
 
               <div className="card-body">
                 <h2 className="card-title">
                   {firstName} {lastName} ({gender}, {age})
                 </h2>
-                <p>{about}</p>
+                <p
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 4,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  {about}
+                </p>
                 <p>
                   <strong>Skills:</strong> {skills?.join(", ")}
                 </p>

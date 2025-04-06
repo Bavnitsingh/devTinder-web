@@ -24,7 +24,11 @@ const Connections = () => {
     fetchConnections();
   }, []);
   if (!connections) return;
-  if (connections.length === 0) return <h1>No Connections Found</h1>;
+  if (connections.length === 0) return (
+    <center>
+      <h1>No Connections Found</h1>
+    </center>
+  );
   return (
     connections && (
       <div

@@ -9,9 +9,9 @@ import { addUser } from "../utils/userSlice";
 const EditProfile = ({ user }) => {
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setlastName] = useState(user.lastName);
-  const [age, setAge] = useState(user.age);
-  const [gender, setGender] = useState(user.gender);
-  const [about, setAbout] = useState(user.about);
+  const [age, setAge] = useState(user.age|| "");
+  const [gender, setGender] = useState(user.gender|| "");
+  const [about, setAbout] = useState(user.about||"");
   const [photoUrl, setPhotoUrl] = useState(user.photoUrl);
   const [skills, setSkills] = useState(user.skills);
   const [showToast, setShowToast] = useState(false);
@@ -92,7 +92,7 @@ const EditProfile = ({ user }) => {
               <label htmlFor="gender">Gender</label>
               <select
                 value={gender}
-                onChange={(e) => setGender(e.target.value + "")}
+                onChange={(e) => setGender(e.target.value)}
                 className="justify-center"
                 style={{
                   padding: "10px",
