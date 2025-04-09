@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { useNavigate } from "react-router-dom";
@@ -14,16 +14,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [error, setError] = useState("");
-
- useEffect(() => {
-   const token = document.cookie
-     .split(";")
-     .find((cookie) => cookie.trim().startsWith("token="));
-   if (token) {
-     navigate("/");
-   }
- }, [navigate]);
-
 
   const handleLogin = async () => {
     try {
