@@ -126,7 +126,7 @@ const Login = () => {
           <p style={{textAlign:"center"}}>
             {isLoginForm ? (
               <>
-                Don't have an account?{" "}
+                Dont have an account?{" "}
                 <span
                   style={{
                     color: "#0ea5e9",

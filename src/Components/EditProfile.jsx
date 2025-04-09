@@ -17,6 +17,7 @@ const EditProfile = ({ user }) => {
   const [showToast, setShowToast] = useState(false);
   const dispatch = useDispatch();
   const [error, setError] = useState("");
+  const navigate = useNavigate()
   const saveProfile = async () => {
     setError("");
     try {
@@ -27,9 +28,11 @@ const EditProfile = ({ user }) => {
       );
       dispatch(addUser(res?.data?.data));
       setShowToast(true);
+
       setTimeout(() => {
         setShowToast(false);
-      }, 3000);
+      }, 2000);
+      return navigate("/user/feed");
     } catch (err) {
       setError(err.response.data);
     }
