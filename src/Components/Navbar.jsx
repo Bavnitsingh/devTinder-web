@@ -29,7 +29,7 @@ const Navbar = () => {
           className="btn btn-outline btn-info text-xl cursor-pointer"
           onClick={() => {
             if (user) {
-              navigate("/feed");
+              navigate("/");
             } else {
               navigate("/login");
             }

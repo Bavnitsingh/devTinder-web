@@ -27,12 +27,12 @@ const EditProfile = ({ user }) => {
         { withCredentials: true }
       );
       dispatch(addUser(res?.data?.data));
-      setShowToast(true);
-
-      setTimeout(() => {
-        setShowToast(false);
-      }, 2000);
-      return navigate("/");
+     setShowToast(true);
+     setTimeout(() => {
+       setShowToast(false);
+       navigate("/");
+     }, 2000);
+      
     } catch (err) {
       setError(err.response.data);
     }
