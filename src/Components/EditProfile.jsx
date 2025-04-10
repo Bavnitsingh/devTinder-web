@@ -32,7 +32,7 @@ const EditProfile = ({ user }) => {
       setTimeout(() => {
         setShowToast(false);
       }, 2000);
-      return navigate("/user/feed");
+      return navigate("/");
     } catch (err) {
       setError(err.response.data);
     }
