@@ -23,7 +23,7 @@ const Feed = () => {
     } catch (err) {
       console.error("Error fetching feed:", err);
     } finally {
-      setLoading(false); // 👈 done loading
+      setLoading(false); 
     }
   };
 

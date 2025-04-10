@@ -7,16 +7,17 @@ import { addRequest, removeRequest } from "../utils/requestSlice";
 const Request = () => {
   const requests = useSelector((store) => store.request);
   const dispatch = useDispatch();
-  const [, setError] = useState(""); 
+  const [, setError] = useState("");
+  const [loading, setLoading] = useState(true); // 👈 New loading state
 
   const reviewRequest = async (status, _id) => {
     try {
-      const res = axios.post(
+      await axios.post(
         BASE_URL + "/request/review/" + status + "/" + _id,
         {},
         { withCredentials: true }
       );
-      dispatch(removeRequest(_id))
+      dispatch(removeRequest(_id));
     } catch (err) {
       setError(err?.res?.data || "Something went wrong");
     }
@@ -30,6 +31,8 @@ const Request = () => {
       dispatch(addRequest(res.data.data));
     } catch (err) {
       setError(err?.response?.data || "Something went wrong");
+    } finally {
+      setLoading(false); // ✅ Done loading
     }
   };
 
@@ -37,6 +40,16 @@ const Request = () => {
     fetchRequests();
   }, []);
 
+  // 🔄 Show spinner while loading
+  if (loading) {
+    return (
+      <center style={{ marginTop: "100px" }}>
+        <span className="loading loading-spinner text-info loading-lg"></span>
+      </center>
+    );
+  }
+
+  // ❌ Show this after loading if no requests
   if (!requests || requests.length === 0) {
     return <h1 style={{ textAlign: "center" }}>No Connection Request Found</h1>;
   }
