@@ -25,9 +25,18 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-300 shadow-sm ">
       <div className="flex-1">
-        <Link to="/" className="btn btn-outline btn-info text-xl">
-          <h2>👨‍💻 DevTinder</h2>
-        </Link>
+        <h2
+          className="btn btn-outline btn-info text-xl cursor-pointer"
+          onClick={() => {
+            if (user) {
+              navigate("/feed");
+            } else {
+              navigate("/login");
+            }
+          }}
+        >
+          👨‍💻 DevTinder
+        </h2>
       </div>
       <div className="flex-none gap-2">
         {user && (
