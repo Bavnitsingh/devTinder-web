@@ -10,7 +10,7 @@ import axios from "axios";
 const Body = () => {
   const dispatch = useDispatch();
   const userData = useSelector((store) => store.user);
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
   const fetchUser = async () => {
     if (userData) return;
     try {
@@ -19,11 +19,12 @@ const Body = () => {
       });
       dispatch(addUser(res.data));
     } catch (err) {
-      if (err.response?.status===401) {
-        navigate("/login");
+      if (err.status === 401) {
+        Navigate("/login");
       }
     }
   };
+
   useEffect(() => {
     fetchUser();
   }, []);
