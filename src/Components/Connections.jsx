@@ -3,11 +3,11 @@ import { BASE_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/connectionSlice";
-
+import { Link } from "react-router-dom";
 const Connections = () => {
   const dispatch = useDispatch();
   const connections = useSelector((store) => store.connections);
-  const [ error,setError] = useState("");
+  const [setError] = useState("");
   const fetchConnections = async () => {
     try {
       const res = await axios.get(BASE_URL + "/user/connections", {
@@ -24,11 +24,12 @@ const Connections = () => {
     fetchConnections();
   }, []);
   if (!connections) return;
-  if (connections.length === 0) return (
-    <center>
-      <h1>No Connections Found</h1>
-    </center>
-  );
+  if (connections.length === 0)
+    return (
+      <center>
+        <h1>No Connections Found</h1>
+      </center>
+    );
   return (
     connections && (
       <div
@@ -58,10 +59,20 @@ const Connections = () => {
           Connections
         </h1>
         {connections.map((connection) => {
-          const { _id,firstName, lastName, about, skills, photoUrl, age, gender } =
-            connection;
+          const {
+            _id,
+            firstName,
+            lastName,
+            about,
+            skills,
+            photoUrl,
+            age,
+            gender,
+          } = connection;
           return (
-            <div className="bg-base-200" key={_id}
+            <div
+              className="bg-base-200"
+              key={_id}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -80,7 +91,7 @@ const Connections = () => {
                   style={{
                     width: "200px",
                     height: "200px",
-                     borderRadius: "40px",
+                    borderRadius: "40px",
                   }}
                   src={photoUrl}
                   alt="profile-picture"
@@ -90,10 +101,7 @@ const Connections = () => {
                 <h2 className="mb-1 text-xl font-semibold text-slate-800">
                   {firstName} {lastName}
                 </h2>
-
-                <p>
-                  {about}
-                </p>
+                <p>{about}</p>
                 <div className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                   {(age || gender) && (
                     <p>
@@ -105,6 +113,14 @@ const Connections = () => {
                 <div className="flex justify-center p-6 pt-2 gap-7">
                   {skills.join(" , ")}
                 </div>
+                <Link to={"/chat/" + _id}>
+                  <button
+                    className="btn btn-info "
+                    style={{ marginTop: "15px" }}
+                  >
+                    Chat
+                  </button>
+                </Link>
               </div>
             </div>
           );
