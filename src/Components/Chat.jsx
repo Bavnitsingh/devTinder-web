@@ -75,7 +75,7 @@ const Chat = () => {
         className="flex-1 overflow-y-auto space-y-3"
         style={{ padding: "20px" }}
       >
-        {messages.map((msg, index) => {
+        {messages.map((msg , index) => {
           return (
             <div
               key={index}
