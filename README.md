@@ -1,33 +1,52 @@
-# DevTinder 
+# 💘 devTinder
 
-- Create a Vite + React application
-- Remove unnecessary code and create a hello world app
-- Install Tailwind css and daisy Ui plugin
-- Add navbar Component to it
-- Create Outlet and Footer
-- Create a Login page
-- Install Axios
-- CORS - install cors package in backend , use it as a middleware by app.use(cors()) where in cors you have to give the origin and credetials : true 
-- Whenever you are making Api call pass {withCredentials:true} for cookie in frontend
-- install react-redux and @redux/toolkit : https://redux-toolkit.js.org/tutorials/quick-start
-- configure Store =><Provider store={appStore}> to  your app.jsx => create a slice => add reducer to store
+A developer-centric matchmaking app where you can connect, collaborate, and chat with fellow devs — just like Tinder, but for developers.
 
-- Add Redux Devtools in Brave/Chrome
-- Login and see if your data is coming properly or not into the store
-- Navbar should update as soon as User logs in 
-- Refactor our code , Create constants file and add BASE_URL there and make Components folder and all the components into it
-- If you aren't logged in you can't access other routes
-- If token is not present navigate user to Login route
+[🌐 Live Demo](https://dev-tinder-web-roan-iota.vercel.app/login)
 
-- Built Logout Feature
-- Built UserCard on Feed
-- Edit Profile feature
-- Show toast when profile is saved
+---
 
-- Build connections page
-- Build Requests page
-- Added Feature - Accept/Reject the connection Request
-- Added Feature - Ignore/Interested from feed card
+## 🚀 Tech Stack
+
+**Frontend**  
+- ⚛️ React  
+- 💨 TailwindCSS  
+- 🎨 DaisyUI  
+
+**Backend**  
+- 🟢 Node.js + Express  
+- 🍃 MongoDB  
+
+---
+
+## ✨ Features
+
+- 🔁 **Swipeable Developer Cards**  
+  Like or Ignore developers based on shared interests or tech stack.
+
+- 🤝 **Connections & Requests**  
+  - View and manage pending requests  
+  - Accept/ignore connection requests  
+  - See your active connections  
+
+- 💬 **Chat with Connections**  
+  Start a real-time chat with matched developers. Built for seamless collaboration.
+
+---
+
+## 📸 Screenshots
+
+<!-- You can upload and embed screenshots like this: -->
+![Home Page]("") 
 
 
 
+---
+
+## 🛠️ Installation & Setup
+
+Clone the repo:
+
+```bash
+git clone https://github.com/Bavnitsingh/devTinder-web.git
+cd devTinder-web
