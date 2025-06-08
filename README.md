@@ -37,7 +37,13 @@ A developer-centric matchmaking app where you can connect, collaborate, and chat
 ## 📸 Screenshots
 
 <!-- You can upload and embed screenshots like this: -->
-![Home Page](https://github.com/Bavnitsingh/devTinder-web/blob/master/Images/Screenshot%202025-06-08%20171025.png) 
+![Home Page](https://github.com/Bavnitsingh/devTinder-web/blob/master/Images/Screenshot%202025-06-08%20171025.png)
+![Home Page](https://github.com/Bavnitsingh/devTinder-web/blob/master/Images/Screenshot%202025-06-08%20172031.png)
+![Home Page](https://github.com/Bavnitsingh/devTinder-web/blob/master/Images/Screenshot%202025-06-08%20172245.png)
+
+
+
+
 
 
 
