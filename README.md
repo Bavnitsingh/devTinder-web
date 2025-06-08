@@ -1,4 +1,4 @@
-# 💘 devTinder
+# 🚀🚀 DevTinder
 
 A developer-centric matchmaking app where you can connect, collaborate, and chat with fellow devs — just like Tinder, but for developers.
 
