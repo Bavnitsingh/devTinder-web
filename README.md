@@ -2,9 +2,10 @@
 
 A developer-centric matchmaking app where you can connect, collaborate, and chat with fellow devs — just like Tinder, but for developers.
 
-**Credentials for Login**
-Email : harman@gmail.com
-Password : Harman@1234
+Credentials for Login
+
+- Email : harman@gmail.com
+- Password : Harman@1234
 
 Or You can try to Sign up 
 
