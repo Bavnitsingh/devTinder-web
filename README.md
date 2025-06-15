@@ -21,7 +21,7 @@ A developer-centric matchmaking app where you can connect, collaborate, and chat
 
 ## ✨ Features
 
-- 🔁 **Swipeable Developer Cards**  
+- 🔁 **Developer Cards**  
   Like or Ignore developers based on shared interests or tech stack.
 
 - 🤝 **Connections & Requests**  
